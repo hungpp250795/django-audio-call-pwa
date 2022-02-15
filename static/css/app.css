@@ -117,8 +117,8 @@ label {
     width: 100%;
 }
 .chat-container {
-    max-height: 500px;
-    min-height: 300px;
+    max-height: 325px;
+    min-height: 100px;
     overflow-y: auto;
 }
 .chat-message {
