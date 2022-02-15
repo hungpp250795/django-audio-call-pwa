@@ -18,9 +18,9 @@
     <div class="sk-container">
         <div class="logo-header">
             <div class="d-flex flex-column justify-content-center align-items-center logo">
-                 <img src="{% static 'images/logo.svg' %}" alt="">
-<!--                <h1>利用時間残り10分です</h1><br>-->
-<!--                <button class="comunicate-btn yellow-btn" style="height: 139px; width: 487px;">アラーム停止</button>-->
+                <img src="{% static 'images/logo.svg' %}" alt="">
+                <h1>利用時間残り10分です</h1><br>
+                <button class="comunicate-btn yellow-btn alarm-btn" style="height: 139px; width: 487px;">アラーム停止</button>
             </div>
             
         </div>
@@ -100,8 +100,19 @@
     <!-- END CHAT MODAL -->
     <script>
         $(document).ready(function() {
+            $('.logo h1').hide();
+            $('.logo .alarm-btn').hide();
             $('#callModal, #chatModal').modal({backdrop: 'static', keyboard: false, show: false})  
-
+            $(document).on('click', '.alarm-btn', function() {
+                $('.logo h1').hide();
+                $('.logo .alarm-btn').hide();
+                $('.logo img').show();
+            })
+            $(document).on('click', '.logo img', function() {
+                $('.logo h1').show();
+                $('.logo .alarm-btn').show();
+                $('.logo img').hide();
+            })
         })
     </script>
 </body>
