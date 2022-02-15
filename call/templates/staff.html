@@ -16,21 +16,30 @@
 </head>
 <body>
     <div class="sk-container">
-        <div class="logo-header">
-            <div class="d-flex flex-column justify-content-center align-items-center logo">
-                <img src="{% static 'images/logo.svg' %}" alt="">
-                <h1 class="mt-5" style="display: none;">利用時間残り10分です</h1><br>
-                <button class="comunicate-btn yellow-btn alarm-btn mb-5" style="height: 139px; width: 487px; display: none;">アラーム停止</button>
+        <div class="contact d-flex flex-column justify-content-around" style="height: 100%;">
+            <div class="contact d-flex justify-content-around align-items-center" style="height: 33.3%;">
+                <button class="comunicate-btn red-btn">
+                    <p class="mb-0">Room 1<br>緊急通話</p><div class="alarm"></div>
+                </button>
+                <button class="comunicate-btn green-btn" data-toggle="modal" data-target="#callModal">
+                    <p class="mb-0">Room ２<br>通話を受ける</p><div class="call"></div>
+                </button>
             </div>
-            
-        </div>
-        <div class="contact-area">
-            <div class="welcom-text d-flex justify-content-center">
-                <label for="">スタッフへの連絡はこちらからどうぞ</label>
+            <div class="contact d-flex justify-content-around align-items-center" style="height: 33.3%;">
+                <button class="comunicate-btn grey-btn" data-toggle="modal" data-target="#chatModal">
+                    <p class="mb-0">Room 3<br>チャットを開始</p><div class="chat"></div>
+                </button>
+                <button class="comunicate-btn red-btn">
+                    <p class="mb-0">Room 4</p>
+                </button>
             </div>
-            <div class="contact d-flex justify-content-around">
-                <button class="comunicate-btn grey-btn" data-toggle="modal" data-target="#chatModal">チャット</button>
-                <button class="comunicate-btn red-btn" data-toggle="modal" data-target="#callModal">通 話</button>
+            <div class="contact d-flex justify-content-around align-items-center" style="height: 33.3%;">
+                <button class="comunicate-btn grey-btn">
+                    <p class="mb-0">Room 5</p>
+                </button>
+                <button class="comunicate-btn red-btn">
+                    <p class="mb-0">Room 6</p>
+                </button>
             </div>
         </div>
     </div>
@@ -56,37 +65,37 @@
     <!-- CHAT MODAL -->
     <div class="modal fade" id="chatModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5>ROKUSAUNA STAFF</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">X</button>
-            </div>
-            
-            <div class="modal-body d-flex flex-column align-items-center">
-                <div class="chat-area">
-                    <div class="chat-container">
-                        <div class="chat-message user-message">
-                            <p>エアコンを消したいのですがどうすればいいですか</p>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>ROKUSAUNA STAFF</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">X</button>
+                </div>
+
+                <div class="modal-body d-flex flex-column align-items-center">
+                    <div class="chat-area">
+                        <div class="chat-container">
+                            <div class="chat-message user-message">
+                                <p>エアコンを消したいのですがどうすればいいですか</p>
+                            </div>
+                            <div class="chat-message staff-message">
+                                <p>壁にあるスマホタイプのリモコンをご使用ください！</p>
+                            </div>
+                            <div class="chat-message user-message">
+                                <p>ありました。<br/>
+                                    ありがとうございます</p>
+                            </div>
                         </div>
-                        <div class="chat-message staff-message">
-                            <p>壁にあるスマホタイプのリモコンをご使用ください！</p>
-                        </div>
-                        <div class="chat-message user-message">
-                            <p>ありました。<br/>
-                                ありがとうございます</p>
-                        </div>
-                    </div>
-                    <div class="chat-input">
-                        <div class="input-group">
-                            <input type="text" class="form-control" name="message">
-                            <div class="input-group-append">
-                              <span class="input-group-text font-27 send" id="basic-addon2">送 信</span>
+                        <div class="chat-input">
+                            <div class="input-group">
+                                <input type="text" class="form-control" name="message">
+                                <div class="input-group-append">
+                                  <span class="input-group-text font-27 send" id="basic-addon2">送 信</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
         </div>
     </div>
     <!-- END CHAT MODAL -->
