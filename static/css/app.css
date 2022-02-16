@@ -158,6 +158,14 @@ label {
     color: #FFFFFF;
     font-size: 35px;
 }
+.speaker {
+    height: 115px;
+    width: auto;
+    margin-bottom: 15px;
+}
+#callModal label {
+    margin-bottom: 15px;
+}
 /* ============================== CHAT ============================== */
 .chat-area {
     width: 100%;
