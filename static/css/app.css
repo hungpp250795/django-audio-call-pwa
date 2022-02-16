@@ -61,8 +61,8 @@ label {
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-    height: 100%;
-    max-height: 140px;
+    height: 130px;
+    /* max-height: 140px; */
     width: 40%;
 }
   
