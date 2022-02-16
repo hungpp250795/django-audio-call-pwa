@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 {% load pwa %}
 {% load static %}
 <head>
@@ -16,23 +16,61 @@
 </head>
 <body>
     <div class="sk-container">
-        <div class="logo-header">
-            <div class="d-flex flex-column justify-content-center align-items-center logo">
-                <img src="{% static 'images/logo.svg' %}" alt="">
-                <h1 class="mt-5" style="display: none;">利用時間残り10分です</h1><br>
-                <button class="comunicate-btn yellow-btn alarm-btn mb-5" style="height: 139px; width: 487px; display: none;">アラーム停止</button>
-            </div>
-            
+        <!-- SELECT ROOM OR STAFF SITE -->
+        <div class="role-container">
+
         </div>
-        <div class="contact-area">
-            <div class="welcom-text d-flex justify-content-center">
-                <label for="">スタッフへの連絡はこちらからどうぞ</label>
+        <!-- END SELECT ROOM OR STAFF SITE -->
+        <!-- USER REGION -->
+        <div class="user-container h-100">
+            <div class="logo-header">
+                <div class="d-flex flex-column justify-content-center align-items-center logo">
+                    <img src="{% static 'images/logo.svg' %}" alt="">
+                    <h1 class="mt-5" style="display: none;">利用時間残り10分です</h1><br>
+                    <button class="comunicate-btn yellow-btn alarm-btn mb-5" style="height: 139px; width: 487px; display: none;">アラーム停止</button>
+                </div>
+                
             </div>
-            <div class="contact d-flex justify-content-around">
-                <button class="comunicate-btn grey-btn" data-toggle="modal" data-target="#chatModal">チャット</button>
-                <button class="comunicate-btn red-btn" data-toggle="modal" data-target="#callModal">通 話</button>
+            <div class="contact-area">
+                <div class="welcom-text d-flex justify-content-center">
+                    <label for="">スタッフへの連絡はこちらからどうぞ</label>
+                </div>
+                <div class="contact d-flex justify-content-around">
+                    <button class="comunicate-btn grey-btn" data-toggle="modal" data-target="#chatModal">チャット</button>
+                    <button class="comunicate-btn red-btn" data-toggle="modal" data-target="#callModal">通 話</button>
+                </div>
             </div>
         </div>
+        <!-- END USER REGION -->
+
+        <!-- STAFF REGION -->
+        <div class="contact d-flex flex-column justify-content-around d-none" style="height: 100%;">
+            <div class="contact d-flex justify-content-around align-items-center" style="height: 33.3%;">
+                <button class="comunicate-btn red-btn">
+                    <p class="mb-0">Room 1<br>緊急通話</p><div class="alarm"></div>
+                </button>
+                <button class="comunicate-btn green-btn" data-toggle="modal" data-target="#callModal">
+                    <p class="mb-0">Room 2<br>通話を受ける</p><div class="call"></div>
+                </button>
+            </div>
+            <div class="contact d-flex justify-content-around align-items-center" style="height: 33.3%;">
+                <button class="comunicate-btn grey-btn" data-toggle="modal" data-target="#chatModal">
+                    <p class="mb-0">Room 3<br>チャットを開始</p><div class="chat"></div>
+                </button>
+                <button class="comunicate-btn red-btn">
+                    <p class="mb-0">Room 4</p>
+                </button>
+            </div>
+            <div class="contact d-flex justify-content-around align-items-center" style="height: 33.3%;">
+                <button class="comunicate-btn grey-btn">
+                    <p class="mb-0">Room 5</p>
+                </button>
+                <button class="comunicate-btn red-btn">
+                    <p class="mb-0">Room 6</p>
+                </button>
+            </div>
+        </div>
+        <!-- END STAFF REGION -->
     </div>
     <!-- PHONE CALL MODAL -->
     <div class="modal fade" id="callModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">

@@ -19,7 +19,7 @@
     height: 65%;
 }
 h1 {
-    font-size: 87px;
+    font-size: 60px;
     color: #FFFFFF;
     margin-bottom: 40px;
 }
@@ -35,7 +35,7 @@ h1 {
     width: 70%;
 }
 label {
-    font-size: 40px;
+    font-size: 35px;
     color: #03234A;
 }
 .contact-area .contact {
@@ -51,7 +51,7 @@ label {
     box-sizing: border-box;
     /* color: #00132C; */
     font-family: "Avenir Next LT W01 Bold",sans-serif;
-    font-size: 53px;
+    font-size: 40px;
     color: #FFFFFF;
     /* font-weight: 700; */
     line-height: 55px;
