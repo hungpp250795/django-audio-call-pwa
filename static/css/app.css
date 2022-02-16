@@ -1,6 +1,3 @@
-.font-27 {
-    font-size: 27px;
-}
 /* ========================== CONTAINER =========================== */
 .sk-container {
     position: fixed;
@@ -199,4 +196,5 @@ label {
 .send {
     background-color: #03234A;
     color: #FFFFFF;
+    font-size: 20px;
 }
