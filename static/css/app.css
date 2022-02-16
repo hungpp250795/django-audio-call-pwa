@@ -198,3 +198,8 @@ label {
     color: #FFFFFF;
     font-size: 20px;
 }
+/* STAFF CONTAINER */
+.staff-container {
+    height: 100%;
+    padding: 15px;
+}
