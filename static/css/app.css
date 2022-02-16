@@ -35,7 +35,7 @@ h1 {
     width: 70%;
 }
 label {
-    font-size: 35px;
+    font-size: 30px;
     color: #03234A;
 }
 .contact-area .contact {
@@ -174,7 +174,7 @@ label {
     width: 466px;
     padding: 15px 25px;
     border-radius: 5px;
-    font-size: 27px;
+    font-size: 20px;
 }
 .chat-message.user-message {
     justify-content: end;
